@@ -1,5 +1,7 @@
 # Swirl Layout
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cerico/swirl-layout.svg)](https://greenkeeper.io/)
+
 ## TLDR / What is it?
 
 A Layout, with header and navbar
