@@ -18,17 +18,16 @@ class Products extends React.Component {
       general: {
         display: display,
         background: this.props.colour || "#7aa7c1",
-        paddingTop: "5%"
+        paddingTop: "5%",
+        height:'100vh',
+        color:'#f9f7ee',
+        fontSize:'44px'
       }
     };
 
     return (
       <div className={styles.grid} style={style.general}>
-        {this.props.products.length > 0
-          ? this.props.products.map((product, i) => (
-              <Card product={product} key={i} />
-            ))
-          : null}
+        content goes here
       </div>
     );
   }

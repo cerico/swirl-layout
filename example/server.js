@@ -5,7 +5,7 @@ const history = require("connect-history-api-fallback");
 var app = express();
 const staticFileMiddleware = express.static("dist");
 
-var port = 59024;
+var port = 59066;
 
 app.get("/bundle/bundle.js", function(req, res) {
   res.sendFile(path.join(__dirname, "dist", "bundle", "bundle.js"));
