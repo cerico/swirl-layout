@@ -72,6 +72,7 @@
     "copy": "cp -r src/index.html dist && cp -r public dist",
     "start": "node server.js",
     "deploy": "./bin/deploy.sh",
+    "create": "./bin/create.sh $1",
     "lint": "prettier  --write '**/*.{js,jsx}'",
     "rebuild": "rm -rf node_modules && npm install"
   },
