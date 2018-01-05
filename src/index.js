@@ -1,38 +1,26 @@
-import React, { Component } from 'react';
-import Sidebar from './sidebar';
-import styles from './layout.css';
-import Header from './header';
-import Swirl from './swirl';
+import React, { Component } from "react";
+import Sidebar from "./sidebar";
+import styles from "./layout.css";
+import Header from "./header";
+import Swirl from "./swirl";
 
 // import { changeSideText } from '../../actions/products';
 
-
-const classNames = require('classnames');
+const classNames = require("classnames");
 
 class Layout extends Component {
-
-  
-
   showContent() {
-
     return (
-      
       <div className={styles.container}>
-        <Header links={this.props.links}/>
-        <Swirl/>
+        <Header links={this.props.links} />
+        <Swirl fill={this.props.colour}/>
       </div>
-    )
+    );
   }
 
   render() {
-    return (
-      this.showContent()
-    )
+    return this.showContent();
   }
 }
 
-
-
 export default Layout;
-
-

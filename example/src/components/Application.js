@@ -1,15 +1,7 @@
-import React from 'react';
+import React from "react";
 
+const Application = props => {
+  return props.application ? <div>soon></div> : null;
+};
 
-const Application = (props) => {
-
-    return (
-      props.application ? 
-        <div>soon></div>        
-      : null
-    )
-  }
-
-export default Application
-
-
+export default Application;
