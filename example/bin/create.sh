@@ -13,7 +13,9 @@ fi
 cp nginx/template.conf nginx/$1.conf
 sed -i "" -e "s/app_name/$1/" nginx/$1.conf
 sed -i "" -e "s/port/$port/" nginx/$1.conf
+sed -i "" -e "s/template/$1/" package.json
 echo "appname=$1" >> bin/config.env
+npm run build
 sftp root@$server << EOF
   cd /etc/nginx/conf.d
   put nginx/$1.conf
@@ -26,7 +28,11 @@ sftp root@$server << EOF
 EOF
 ssh root@$server << EOF
   cd /var/www/html/$1
-  npm install express
+  npm install express connect-history-api-fallback
   pm2 start server.js --name $1
-  service nginx reload
+  service nginx stop
+  /opt/letsencrypt/letsencrypt-auto certonly --standalone -d $1.malham.io
+  service nginx start
 EOF
+rm -rf .git
+git init

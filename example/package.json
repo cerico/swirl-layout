@@ -1,7 +1,7 @@
 {
   "name": "hello-cards-example",
   "version": "1.0.0",
-  "description": "template",
+  "description": "swirl-layout",
   "main": "server.js",
   "dependencies": {
     "swirl-layout": "^0.0.7",
