@@ -82,7 +82,7 @@ class About extends React.Component  {
 
         <div style={style.blurb}>
         Firstly, install the package<br/>
-        <pre style={style.innerCode}>➜  musicali git:(dev) ✗ npm install swirl</pre>
+        <pre style={style.innerCode}>➜  musicali git:(dev) ✗ npm install swirl-layout</pre>
        </div>
 
         <div style={style.blurb}>Secondly import into your project<br/>
